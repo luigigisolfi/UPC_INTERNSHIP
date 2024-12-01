@@ -1,0 +1,502 @@
+KPL/PCK
+
+\begindata
+   CASSINI_PCK_VERSION     = ( '2005-FEB-28' )
+\begintext
+
+
+P_constants (PcK) SPICE kernel file
+
+Refer to the notes at the bottom of the file for help, contacts, version history,
+references, and Cassini-specific parameter descriptions. 
+
+
+-------- SUN
+
+
+         BODY10_GM from [3].
+
+
+         \begindata 
+         BODY10_GM              = (   132712440017.9870         )
+         \begintext
+
+
+-------- VENUS
+
+
+         BODY2_GM, BODY299_GM from [4].
+
+
+         \begindata
+         BODY2_GM            =  (         324858.598826460   )
+         BODY299_GM          =  (         324858.598826460   )   
+         \begintext
+
+
+-------- EARTH
+
+
+         BODY3_GM, BODY399_GM from [3]. 
+         
+         \begindata
+         BODY3_GM            =  (         403503.233479087  )
+         BODY399_GM          =  (         398600.4328969392  )
+         \begintext
+
+
+-------- JUPITER
+
+
+         BODY5_GM, BODY599_GM from [3].
+            
+         \begindata
+         BODY5_GM            =  (       126712767.8577960      )
+         BODY599_GM          =  (       126686536.9610660      )
+         \begintext
+
+
+-------- SATURN
+
+
+         BODY6_GM, BODY699_GM from [4].
+         Nonzero gravitational harmonics listed below are J2, J4 from [4] and 
+         J6 from [3] C22 and S22 from [1]. 
+         RA and DEC pole vectors from [3]. 
+         
+
+         \begindata
+         BODY6_GM            =  (     37940575.96714743       )
+         BODY699_GM          =  (        37931197.4166          )
+         BODY699_POLE_RA        = (  40.584988  -0.042290  0.  )
+         BODY699_POLE_DEC       = (  83.537357 -0.004440  0.  )
+         BODY699_JCOEF          = ( 0.0, 0.016291386368, 0.0, -0.000930863753, 0.0, 0.000089007261  )
+         BODY699_CCOEF          = ( 0.0, 0.0,     0.0000000000000 ) 
+         BODY699_SCOEF          = ( 0.0, 0.0,     0.00000000 )
+         \begintext
+
+
+-------- URANUS
+
+
+         BODY7_GM value from [3].  
+
+         \begindata
+         BODY7_GM          = (      5794549.007071874       )
+         \begintext
+
+
+-------- MOON
+
+
+         BODY301_GM from [3].
+         
+         \begindata
+         BODY301_GM          =  (          4902.800582147764 )
+         \begintext
+
+
+
+-------- MIMAS
+
+
+         BODY601_GM from [4].
+         
+         \begindata
+         BODY601_GM          =  ( 2.543221623761831 )
+         \begintext
+
+
+-------- ENCELADUS
+
+
+         BODY602_GM from [4].
+
+
+         \begindata
+         BODY602_GM          =  ( 7.680749472948529 ) 
+         \begintext
+
+
+-------- TETHYS
+
+
+         BODY603_GM from [4].
+
+
+         \begindata
+         BODY603_GM          =  (  41.20953772443173  )
+         \begintext
+
+
+-------- DIONE
+
+
+         BODY604_GM from [4].
+
+
+         \begindata
+         BODY604_GM          =  ( 73.11013294006862 )
+         \begintext
+
+
+-------- RHEA
+
+
+         BODY605_GM from [4].
+
+
+         \begindata
+         BODY605_GM          =  ( 154.0976429614129  )
+         \begintext
+
+
+-------- TITAN
+
+
+         BODY606_GM from [4].
+
+
+         \begindata
+         BODY606_GM          =  (  8978.252049389006 )
+         \begintext
+
+
+-------- HYPERION
+
+
+         BODY607_GM from [4].
+
+         \begindata
+         BODY607_GM          =  (   0.379196699024020  )
+         \begintext
+
+
+-------- IAPETUS
+
+
+         BODY608_GM from [4].
+
+
+         \begindata
+         BODY608_GM          =  ( 120.7250175986224  )
+         \begintext
+
+
+-------- PHOEBE
+
+
+         BODY609_GM from [3].
+
+
+         \begindata
+         BODY609_GM          =  ( 0.5529492368788559 ) 
+         \begintext
+
+
+
+         Note that GM values >= 1.0 are packaged as is into 7CONIC_VEC 
+         commands for AACS to propagate the body's ephemeris. 
+         For GM values < 1.0, the value in the G_MASS parameter 
+         of the 7CONIC_VEC command is set to 1.0.  One is the minimum 
+         value for the G_MASS parameter. The resetting of the G_MASS 
+         parameter to the minimum acceptable where the actual 
+         GM is < 1.0 is acceptable since Cassini will not pass close enough 
+         to any of the affected bodies for the gravitational mass 
+         to have an effect.
+         
+
+-------- CONSTANTS AND NOTES FOR CASPER USERS
+
+
+         \begindata
+         BODY601_GM/PRIMARY  =  (              6.59087D-08             )
+         BODY602_GM/PRIMARY  =  (              1.29181D-07             )
+         BODY603_GM/PRIMARY  =  (              1.1022D-06              )
+         BODY604_GM/PRIMARY  =  (              1.92865D-06             )
+         BODY605_GM/PRIMARY  =  (              4.05998D-06             )
+         BODY606_GM/PRIMARY  =  (              2.36697D-04             )
+         BODY607_GM/PRIMARY  =  (              2.60998D-08             )
+         BODY608_GM/PRIMARY  =  (              2.79453D-06             )
+         BODY609_GM/PRIMARY  =  (              1.26545D-08             )
+         BODY610_GM/PRIMARY  =  (              3.38507D-09             )
+         BODY611_GM/PRIMARY  =  (              9.41176D-10             )
+         BODY612_GM/PRIMARY  =  (              4.48179D-11             )
+         BODY613_GM/PRIMARY  =  (              1.26545D-11            )
+         BODY614_GM/PRIMARY  =  (              6.32723D-12            )
+         BODY615_GM/PRIMARY  =  (              1.89817D-11             )
+         BODY616_GM/PRIMARY  =  (              5.79996D-10             )
+         BODY617_GM/PRIMARY  =  (              3.42725D-10             )
+         BODY618_GM/PRIMARY  =  (              4.74543D-12             )
+         \begintext
+         
+-------- URLS AND CONTACTS
+
+
+Description of PCK format and contents can be found in NAIF's PCK "required
+reading" document, at:
+
+ftp://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/ascii/individual_docs/pck.req
+
+
+NAIF tutorial on PCK formatting and use at:
+
+ftp://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/office/individual_docs/16_pck.ppt
+ftp://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/office/packages/
+SPICE_Tutorials_Office.zip
+
+
+The Cassini PCK & ephemeris files can be found on the DOM, and at:
+
+ftp://naif.jpl.nasa.gov/pub/naif/CASSINI/kernels/
+
+
+Questions regarding this file can be directed to:
+
+Diane Conner (818)354-8586 Diane.Conner@jpl.nasa.gov
+David Seal   (818)354-2707 David.Seal@jpl.nasa.gov
+
+
+-------- VERSION HISTORY
+
+
+The noted versions were officially published; the others were
+created and circulated for internal review only.
+
+2005 Feb 28 ( published )
+A. Tinio
+
+Applicable Ephemeris SPK File:
+   050105R_SCPSE_04247_04336 (s/c=-82, planets, satellites)
+
+Restrictions/Limitations = Use for Tour Analysis for period of SPK file.
+
+Reference/Source of new values = 050105_00bTb
+
+Parameter              Superceded Value       New Value
+
+BODY2_GM               324858.598826460       324858.598826460
+BODY6_GM               37940594.58466490      37940575.96714743
+BODY699_GM             37931216.9052          37931197.4166
+BODY699_POLE_RA(1)     40.585770              40.584988
+BODY699_POLE_DEC(1)    83.537290              83.537357
+BODY699_JCOEF(2)       0.016290382080         0.016291386368
+BODY699_JCOEF(4)       -0.000934342762        -0.000930863753
+BODY601_GM             2.543886999046834      2.543221623761831
+BODY602_GM             7.896235619817622      7.680749472948529
+BODY603_GM             41.21020363352076      41.20953772443173
+BODY604_GM             73.10970856734933      73.11013294006862
+BODY605_GM             153.4403813617471      154.0976429614129
+BODY606_GM             8978.060680624023      8978.252049389006
+BODY607_GM             0.521670363874684      0.379196699024020
+BODY608_GM             120.3437832637150      120.7250175986224
+BODY609_GM*            120.7250175986224      0.5529492368788559
+
+*BODY609_GM value was inadvertently updated with the value for
+ BODY608_GM in the "2005 Jan 10" pck file.  This delivery
+ corrects this error. The new value for BODY609_GM is the previous
+ correct value which appears in the "2004 Dec 9" pck file. 
+ BODY608_GM is also correctly updated in this delivery. 
+
+2005 Jan 10 ( published )
+D. Conner
+
+Applicable Ephemeris SPK File:
+   050105R_SCPSE_04247_04336 (s/c=-82, planets, satellites)
+
+Restrictions/Limitations = Use for Tour Analysis for period of SPK file.
+
+Reference/Source of new values = 050105_00bTb
+
+Parameter              Superceded Value       New Value
+
+BODY2_GM               324858.598826460       324858.598826460
+BODY6_GM               37940594.58466490      37940575.96714743
+BODY699_GM             37931216.9052          37931197.4166
+BODY699_POLE_RA(1)     40.585770              40.584988
+BODY699_POLE_DEC(1)    83.537290              83.537357
+BODY699_JCOEF(2)       0.016290382080         0.016291386368
+BODY699_JCOEF(4)       -0.000934342762        -0.000930863753
+BODY601_GM             2.543886999046834      2.543221623761831
+BODY602_GM             7.896235619817622      7.680749472948529
+BODY603_GM             41.21020363352076      41.20953772443173
+BODY604_GM             73.10970856734933      73.11013294006862
+BODY605_GM             153.4403813617471      154.0976429614129
+BODY606_GM             8978.060680624023      8978.252049389006
+BODY607_GM             0.521670363874684      0.379196699024020
+BODY608_GM             120.3437832637150      120.7250175986224
+
+
+2004 Dec 9 ( published )
+D. Conner
+
+This file was created from cpck29Sep2004.tpc.
+Removed keywords controlled by PSG, including
+Jupiter satellites, to a separate file
+which is concatenated to this file.  Only NAVT affected keywords
+appear above.  
+
+Minor satellites and rocks keywords have been moved to the rocks
+PCK in a separate file cpck_rock.... 
+
+BODY799_GM keyword removed.  NAVT only provides a System GM.
+
+Applicable current Ephemeris = 041210AP_SCPSE_04329_08189
+Restrictions/Limitations = None
+Reference/Source of new values = 041207_00cTc (OD Solution)
+
+Parameter              Superceded Value       New Value
+
+BODY10_GM              132712440035.0199      132712440017.9870
+BODY2_GM               324858.592000000       324858.598826460
+BODY3_GM               403503.241738000       403503.233479087
+BODY399_GM             398600.4415000001      398600.4328969392
+BODY5_GM               126712765.4543717      126712767.8577960
+BODY599_GM             126686534.5576417      126686536.9610660
+BODY6_GM               37940630.56986377      37940594.58466490
+BODY699_GM             37931248.2650          37931216.9052
+BODY699_POLE_RA(1)     40.578921              40.585770
+BODY699_POLE_DEC(1)    83.537507              83.537290
+BODY699_JCOEF(2)       0.016292234642         0.016290382080
+BODY699_JCOEF(4)       -0.000927651602        -0.000934342762
+BODY699_JCOEF(6)       0.000096989418         0.000089007261
+BODY7_GM               5794549.007815570      5794549.007071874
+BODY301_GM             4902.800238000001      4902.800582147764
+BODY601_GM             2.520135918453203      2.543886999046834
+BODY602_GM             7.266915346837596      7.896235619817622
+BODY603_GM             41.21004576075436      41.21020363352076
+BODY604_GM             73.11466506841310      73.10970856734933
+BODY605_GM             155.8320579960241      153.4403813617471
+BODY606_GM             8977.930889955829      8978.060680624023
+BODY607_GM             0.720000000000000      0.521670363874684
+BODY608_GM             123.1583788283249      120.3437832637150
+BODY609_GM             0.5517732425959611     0.5529492368788559
+
+
+2004 Sep 29 (published)
+
+Applicable current Ephemeris:
+041001AP_SCPSE_04275_08222.XSP (s/c=-82, planets, satellites) 
+
+Restrictions/Limitations = None
+
+Reference/Source of new values = 040927_00aTa (OD solution)
+
+Parameter              Superceded Value       New Value
+
+BODY6_GM               37940690.7690100       37940630.56986377 
+BODY699_GM             37931300.4040          37931248.2650 
+BODY699_POLE_RA(1)     40.584666              40.578921 
+BODY699_POLE_DEC(1)    83.537319              83.537507 
+BODY699_JCOEF(2)       0.016293483929         0.016292234642 
+BODY699_JCOEF(4)       -0.000921635401        -0.000927651602 
+BODY699_JCOEF(6)       0.000088726120         0.000096989418 
+BODY601_GM             2.521560245529253      2.520135918453203 
+BODY602_GM             7.127481554948487      7.266915346837596 
+BODY603_GM             41.20541310412448      41.21004576075436 
+BODY604_GM             73.11977199413563      73.11466506841310 
+BODY605_GM             154.4787324900041      155.8320579960241 
+BODY606_GM             8977.981454369899      8977.930889955829 
+BODY608_GM             132.6589941798197      123.1583788283249 
+BODY609_GM             0.5515856703994798     0.5517732425959611
+
+2004 Jun 21 (published)
+
+Applicable current Ephemeris:
+040622AP_SCPSE_04002_09011.BSP (s/c=-82, planets, satellites)
+040622AP_SK_04122_08222.BSP (spacecraft ephemeris, scid=-82)
+040622AP_PE_04002_09011.BSP (planetary ephemeris)
+040622AP_SE_04002_09011.BSP (satellite ephemeris)
+
+Reference/Source of new values = 040615_00Sa  (OD solution)
+
+Parameter              Superceded Value       New Value
+
+BODY6_GM               37940679.45741954      37940690.76901004
+BODY699_GM             37931289.4836          37931300.4040
+BODY699_POLE_RA(1)     40.586420              40.584666
+BODY699_POLE_DEC(1)    83.537291              83.537319
+BODY699_JCOEF(2)       0.016292243237         0.016293483929
+BODY699_JCOEF(4)       -0.000928716077        -0.000921635401
+BODY699_JCOEF(6)       0.000088845313         0.000088726120
+BODY601_GM             2.539908238874431      2.521560245529253
+BODY602_GM             6.980134096218938      7.127481554948487
+BODY603_GM             41.21066708236702      41.20541310412448
+BODY604_GM             73.12382308588424      73.11977199413563
+BODY605_GM             154.6927779454911      154.4787324900041
+BODY606_GM             8978.009444641593      8977.981454369899
+BODY608_GM             132.2117925658847      132.6589941798197
+BODY609_GM             0.4852416379406062     0.5515856703994798    *
+
+* Reference for new Phoebe GM:  IOM 312.0-024-04 "Navigation Results 
+from the Phoebe flyby", J.B. Jones, 16 June 2004.
+
+
+2004 May 05 (published)
+
+BODY299_GM was set equal to the BODY2_GM.
+BODY799_GM was calculated based on the new BODY7_GM.
+
+Applicable Ephemeris Files:
+  040506AP_SCPSE_04122_08222.XSP (s/c=-82, planets, satellites)
+  040506AP_SK_04122_08222.XSP (spacecraft ephemeris, scid=-82)
+  040506AP_OPK_04122_08222.XSP (s/c & probe, scids=-82,-150)
+  040506AP_PE_94328_16357.XSP (planetary ephemeris)
+  040506AP_SE_04002_09011.XSP (satellite ephemeris)
+
+Reference/Source of new values is NAV OD Solution: 040409_00Sa
+
+Parameter              Superceded Value       New Value
+
+BODY10_GM              132712440017.9870      132712440035.0199
+BODY2_GM               324858.5988264598      324858.592000000
+BODY3_GM               403503.2334790870      403503.241738000
+BODY399_GM             398600.4328969392      398600.4415000001
+BODY5_GM               126712767.8577960      126712765.4543717
+BODY599_GM             126686536.9637693      126686534.5576417
+BODY6_GM               37940629.764           37940679.45741954
+BODY699_GM             37931267.73            37931289.4836
+BODY699_POLE_RA(1)     40.589                 40.586420
+BODY699_POLE_RA(2)     -0.036                 -0.042290
+BODY699_POLE_DEC(1)    83.537                 83.537291
+BODY699_POLE_DEC(2)    -0.004                 -0.004440
+BODY699_JCOEF(2)       0.016298               0.016292243237
+BODY699_JCOEF(4)       -0.000915              -0.000928716077
+BODY699_JCOEF(6)       0.000103               0.000088845313
+BODY699_CCOEF(3)       0.00000070             0.0000000000000
+BODY699_SCOEF(3)       -0.00000020            0.00000000
+BODY7_GM               5794549.007071874      5794549.007815570
+BODY301_GM             4902.800582147764      4902.800238000001
+BODY601_GM             2.5                    2.539908238874431
+BODY602_GM             4.9                    6.980134096218938
+BODY603_GM             41.808                 41.21066708236702
+BODY604_GM             73.156                 73.12382308588424
+BODY605_GM             154.000                154.6927779454911
+BODY606_GM             8978.2                 8978.009444641593
+BODY607_GM             0.99                   0.720000000000000
+BODY608_GM             106.0                  132.2117925658847
+BODY609_GM             0.48                   0.4852416379406062
+
+
+  
+-------- FORMATTING FOR SPECIAL PARAMETERS
+
+
+BODYNNN_GM
+   GM in km^3/s^2
+   
+BODYNNN_*COEF
+   Where * = J, C, or S. These coefficients are the normalized gravity field
+   coefficients. J's are 1 to N, C's and S's have two indexes. Index 1 goes from
+   1 to N, and Index 2 goes from 1 to (Index 1). E.g. C11, C21, C22, C31, C32,
+   C33, C41, etc.
+
+
+
+
+-------- REFERENCES
+
+   1.   Cassini NAV OD solution 040615_00Sa.
+   2.   Cassini NAV OD solution 040927_00aTa.
+   3.   Cassini NAV OD solution 041207_00cTc.
+   4.   Cassini NAV OD solution 050105_00bTb.

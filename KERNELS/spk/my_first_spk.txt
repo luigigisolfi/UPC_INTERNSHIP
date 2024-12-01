@@ -1,0 +1,17 @@
+\begindata
+   INPUT_DATA_TYPE   = 'STATES'
+   OUTPUT_SPK_TYPE   = 5
+   OBJECT_ID         = -54278
+   CENTER_NAME       = 'EARTH'
+   REF_FRAME_NAME    = 'J2000'
+   LEAPSECONDS_FILE  = 'kernels/lsk/naif0008.tls'
+   PRODUCER_ID       = 'LGISOLFI'
+   DATA_ORDER        = 'epoch x y z vx vy vz'
+   DATA_DELIMITER    = ','
+   INPUT_DATA_FILE   = 'my_first_input_data.rtf'
+   OUTPUT_SPK_FILE   = 'my_first_output_spk.rtf'
+   INPUT_DATA_UNITS  = ( 'ANGLES = degrees' 'DISTANCES = km' )
+   EPOCH_STR_LENGTH  = 20
+   START_TIME        = '1998 DEC 12 10:23:20'
+   CENTER_GM         = 398659.29362947830 
+\begintext
