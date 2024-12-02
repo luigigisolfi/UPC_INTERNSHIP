@@ -5,12 +5,12 @@ For this reason, I apologise for the mess you might find while playing with it �
 Anyways. 
 This repository contains the following folders:
 ## 1) KERNELS 🚀
-  This contains spice kernels used by a lot of functions present in the repo. (Of course, you will need to download mice in order to play with them!)
+  This contains spice kernels used by a lot of functions present in the repo. (Of course, you will need to download [**mice**](https://naif.jpl.nasa.gov/pub/naif/toolkit//MATLAB/PC_Windows_VisualC_MATLAB9.x_64bit/packages/README) in order to play with them!)
 ## 2) ARTICLES 📖
   This contains some articles that will definitely be useful to you, because, well... they were to me too!
-  Perhpas the two most important articles you'll find in here are:
-  - Jorba, Simo, Masdemont, Gomez - Dynamics and Mission Design Near Libration Points.pdf
-  - RS_a_frequency_based_hierarchy_of_dynamical_models_in_cislunar_space_leveraging_periodically_and_quasi_periodically_perturbed_models.pdf
+  Perhaps the three most important articles you'll find in here are:
+  - [Jorba, Simo, Masdemont, Gomez - Dynamics and Mission Design Near Libration Points.pdf](https://www.researchgate.net/publication/33421338_Dynamics_and_mission_design_near_libration_points_advanced_methods_for_collinear_points)
+  - [RS_a_frequency_based_hierarchy_of_dynamical_models_in_cislunar_space_leveraging_periodically_and_quasi_periodically_perturbed_models.pdf
   - UPC_Traineeship_Report.pdf (a very raw document I started writing - and which I plan to keep writing in the future - where some tedious computations are written down in LATEX. You can thank me later!)
 
   The equations and models developed in these articles are the same you'll find scripted in the codes. 
