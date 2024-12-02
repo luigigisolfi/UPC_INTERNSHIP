@@ -10,8 +10,8 @@ This repository contains the following folders:
   This contains some articles that will definitely be useful to you, because, well... they were to me too!
   Perhaps the three most important articles you'll find in here are:
   - [Jorba, Simo, Masdemont, Gomez - Dynamics and Mission Design Near Libration Points.pdf](https://www.researchgate.net/publication/33421338_Dynamics_and_mission_design_near_libration_points_advanced_methods_for_collinear_points)
-  - [RS_a_frequency_based_hierarchy_of_dynamical_models_in_cislunar_space_leveraging_periodically_and_quasi_periodically_perturbed_models.pdf
-  - UPC_Traineeship_Report.pdf (a very raw document I started writing - and which I plan to keep writing in the future - where some tedious computations are written down in LATEX. You can thank me later!)
+  - [BEOM_PARK_ASSESSMENT.pdf](https://link.springer.com/article/10.1007/s10569-023-10178-9)
+  - **UPC_Traineeship_Report.pdf** (a very raw document I started writing - and which I plan to keep writing in the future - where some tedious computations are written down in LATEX. You can thank me later!)
 
   The equations and models developed in these articles are the same you'll find scripted in the codes. 
 ## 3) MODELS 📈
